@@ -24,6 +24,10 @@ namespace GoogleSheetDownload
             {
                 var newSheetRowData = new SheetRowData();
                 var cells = linesArray[i].Split(",");
+                if (IsAllEmptyLine(cells))
+                {
+                    continue;
+                }
                 newSheetRowData.Parse(headerLine, cells);
                 sheetRowDatas.Add(newSheetRowData);
             }
@@ -41,5 +45,23 @@ namespace GoogleSheetDownload
             return newLineString;
         }
 
+        private static bool IsAllEmptyLine(string[] lineString)
+        {
+            bool[] emptyLineBoolList = new bool[lineString.Length];
+            for (int i = 0; i < lineString.Length; i++)
+            {
+                var newStringLine = ClearUnwantedCharacters(lineString[i]);
+                if (string.IsNullOrEmpty(newStringLine))
+                {
+                    emptyLineBoolList[i] = true;
+                }
+            }
+            foreach (var isEmpty in emptyLineBoolList)
+            {
+                if (!isEmpty)
+                    return false;
+            }
+            return true;
+        }
     }
 }
