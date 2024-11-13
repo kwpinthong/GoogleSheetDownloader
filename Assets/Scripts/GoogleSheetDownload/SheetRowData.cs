@@ -19,8 +19,8 @@ namespace GoogleSheetDownload
             {
                 Columns.Add(new KeyContainer
                 {
-                    Header = headerLine[i].Replace("\n", "").Replace("\r", ""),
-                    CellValue = cells[i].Replace("\n", "").Replace("\r", ""),
+                    Header = CSVParser.ClearUnwantedCharacters(headerLine[i]),
+                    CellValue = CSVParser.ClearUnwantedCharacters(cells[i]),
                 });
             }
         }

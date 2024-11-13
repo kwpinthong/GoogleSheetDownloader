@@ -30,5 +30,16 @@ namespace GoogleSheetDownload
             
             return sheetRowDatas;
         }
+
+        public static string ClearUnwantedCharacters(string lineString)
+        {
+            string newLineString = lineString;
+            if (newLineString.Contains("\r"))
+            {
+                newLineString = lineString.Replace("\r", "");
+            }
+            return newLineString;
+        }
+
     }
 }
