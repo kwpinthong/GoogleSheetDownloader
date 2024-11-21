@@ -18,3 +18,6 @@ How to use
 
 Example Google Sheet Link
 - [Google Sheet Example](https://docs.google.com/spreadsheets/d/1Ecqa5EU_-vAD7erb5KzyKy3ku7IGQPDWLZ4hH2Ye0Ao/edit?usp=sharing)
+
+  TODO
+  - case "," in column
