@@ -1,0 +1,17 @@
+{
+    "name": "GoogleSheetDownload.Example",
+    "rootNamespace": "",
+    "references": [
+        "GUID:622f9b408a1a1a641a701e6a370d4f48",
+        "GUID:e760ea07b9c912848a38c9f09661bd1f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

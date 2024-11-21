@@ -1,4 +1,4 @@
-namespace GoogleSheetDownload
+namespace GoogleSheetDownload.Editor
 {
     public class KeyContainer
     {

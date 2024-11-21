@@ -1,21 +1,9 @@
 using System.Collections.Generic;
 
-namespace GoogleSheetDownload
+namespace GoogleSheetDownload.Editor
 {
     public static class CSVDownloader
     {
-        // 1. Example
-        /*
-        public static List<string> Download(string sheetID, string gid)
-        {
-            var url = FormatGoogleSheetLink(sheetID, gid);
-            var csvString = DownloadEntry(url);
-            return CSVParser.GetLines(csvString);
-        }
-        */
-
-        // 2. SheetRowData
-        
         public static List<SheetRowData> Download(string sheetID, string gid)
         {
             var url = FormatGoogleSheetLink(sheetID, gid);

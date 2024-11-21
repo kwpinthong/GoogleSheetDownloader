@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace GoogleSheetDownload
+namespace GoogleSheetDownload.Editor
 {
     public class SheetRowData
     {
