@@ -1,6 +1,5 @@
 Requirement Plugins
-- NaughtyAttributes by dbrizov
-- https://github.com/dbrizov/NaughtyAttributes
+- NaughtyAttributes by dbrizov : https://github.com/dbrizov/NaughtyAttributes
 
 Requirement Setup
 1. Google Sheet must set access to the public as a Viewer
