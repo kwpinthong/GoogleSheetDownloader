@@ -1,6 +1,9 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 
-namespace GoogleSheetDownload.Editor.Utility
+namespace StarterKit.Common.Editor
 {
     public static class AssetFinder
     {
@@ -9,13 +12,13 @@ namespace GoogleSheetDownload.Editor.Utility
 #if UNITY_EDITOR
             string filter = $"t:{typeof(T).Name} {fileName}";
             string[] searchInFolders = string.IsNullOrEmpty(path) ? null : new[] { path };
-            var guids = UnityEditor.AssetDatabase.FindAssets(filter, searchInFolders);
+            
+            var guids = AssetDatabase.FindAssets(filter, searchInFolders);
             if (guids.Length == 0)
-            {
                 return null;
-            }
-            path = UnityEditor.AssetDatabase.GUIDToAssetPath(guids[0]);
-            var result = UnityEditor.AssetDatabase.LoadAssetAtPath<T>(path);
+            
+            path = AssetDatabase.GUIDToAssetPath(guids[0]);
+            var result = AssetDatabase.LoadAssetAtPath<T>(path);
             if (result != null)
             {
                 var resultName = result.name.ToLower();
@@ -23,14 +26,10 @@ namespace GoogleSheetDownload.Editor.Utility
                 var fileNameLower = fileName.ToLower();
                 fileNameLower = fileNameLower.Replace(" ", "");
                 if (resultName == fileNameLower)
-                {
                     return result;
-                }
             }
-            return null;
-#else
-            return null;
 #endif
+            return null;
         }
     }
 }
