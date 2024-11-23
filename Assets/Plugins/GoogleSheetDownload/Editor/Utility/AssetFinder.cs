@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GoogleSheetDownload.Editor
+namespace GoogleSheetDownload.Editor.Utility
 {
     public static class AssetFinder
     {

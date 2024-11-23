@@ -1,5 +1,7 @@
 #if UNITY_EDITOR
 using GoogleSheetDownload.Editor;
+using GoogleSheetDownload.Editor.Data;
+using GoogleSheetDownload.Editor.Utility;
 #endif
 using GoogleSheetDownload.Runtime;
 using UnityEngine;
@@ -18,6 +20,11 @@ public class ExampleDatabase : RemoteDatabase<ExampleData>
         newExampleData.Coin = sheetRowData.GetInt("Coin");
         newExampleData.Normalize = sheetRowData.GetFloat("Normalize");
         newExampleData.IsAllow = sheetRowData.GetBool("IsAllow");
+        
+        newExampleData.ItemList = sheetRowData.GetList<string>("ItemList", ",");
+        newExampleData.ItemList2 = sheetRowData.GetList<string>("ItemList2",",");
+        newExampleData.ItemList3 = sheetRowData.GetList<string>("ItemList3",",");
+        newExampleData.ItemList4 = sheetRowData.GetList<string>("ItemList4",";");
                 
         var spriteName = sheetRowData.GetString("SpriteName");
         newExampleData.Sprite = AssetFinder.Find<Sprite>(spriteName);

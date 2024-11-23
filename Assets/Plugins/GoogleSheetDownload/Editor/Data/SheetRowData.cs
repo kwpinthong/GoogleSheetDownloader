@@ -1,6 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
+using GoogleSheetDownload.Editor.CSV;
+using UnityEngine;
 
-namespace GoogleSheetDownload.Editor
+namespace GoogleSheetDownload.Editor.Data
 {
     public class SheetRowData
     {
@@ -11,15 +14,15 @@ namespace GoogleSheetDownload.Editor
             Columns = new List<KeyContainer>();
         }
 
-        public void Parse(string[] headerLine, string[] cells, int startColumnIndex = 0)
+        public void Parse(List<string> headerLine, List<string> cells, int startColumnIndex = 0)
         {
             Columns.Clear();
-            for (var i = startColumnIndex; i < headerLine.Length; i++)
+            for (var i = startColumnIndex; i < headerLine.Count; i++)
             {
                 Columns.Add(new KeyContainer
                 {
                     Header = CSVParser.ClearUnwantedCharacters(headerLine[i]),
-                    CellValue = CSVParser.ClearUnwantedCharacters(cells[i]),
+                    CellValue = cells[i],
                 });
             }
         }
@@ -29,10 +32,9 @@ namespace GoogleSheetDownload.Editor
             foreach (var column in Columns)
             {
                 if (column.Header == header)
-                {
                     return int.TryParse(column.CellValue, out var result) ? result : -1;
-                }
             }
+            
             return -1;
         }
 
@@ -41,10 +43,9 @@ namespace GoogleSheetDownload.Editor
             foreach (var column in Columns)
             {
                 if (column.Header == header)
-                {
                     return float.TryParse(column.CellValue, out var result) ? result : -1;
-                }
             }
+            
             return -1;
         }
         
@@ -53,10 +54,9 @@ namespace GoogleSheetDownload.Editor
             foreach (var column in Columns)
             {
                 if (column.Header == header)
-                {
                     return column.CellValue;
-                }
             }
+            
             return string.Empty;
         }
         
@@ -65,11 +65,21 @@ namespace GoogleSheetDownload.Editor
             foreach (var column in Columns)
             {
                 if (column.Header == header)
-                {
                     return bool.TryParse(column.CellValue, out var result) ? result : false;
-                }
             }
+            
             return false;
+        }
+
+        public List<T> GetList<T>(string header, string separator = null)
+        {
+            foreach (var column in Columns)
+            {
+                if (column.Header == header)
+                    return CSVParser.SplitItemList(column.CellValue, separator).Cast<T>().ToList<T>();
+            }
+            
+            return new List<T>();
         }
     }
 }

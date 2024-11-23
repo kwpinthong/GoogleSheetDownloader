@@ -4,6 +4,8 @@ using NaughtyAttributes;
 using UnityEngine;
 #if UNITY_EDITOR
 using GoogleSheetDownload.Editor;
+using GoogleSheetDownload.Editor.CSV;
+using GoogleSheetDownload.Editor.Data;
 using UnityEditor;
 #endif
 

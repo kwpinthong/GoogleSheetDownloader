@@ -19,111 +19,347 @@ MonoBehaviour:
     Normalize: 0.9
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex2
     Name: Example2
     Coin: 20
     Normalize: 0.8
     IsAllow: 0
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex3
     Name: Example3
     Coin: 500
     Normalize: 1
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex4
     Name: Example4
     Coin: 60
     Normalize: 0.01
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex5
     Name: Example5
     Coin: 1
     Normalize: 1
     IsAllow: 0
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex6
     Name: Example6
     Coin: 44
     Normalize: 0.7
     IsAllow: 0
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex7
     Name: Example7
     Coin: 55
     Normalize: 0.3
     IsAllow: 0
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex8
     Name: Example8
     Coin: 887
     Normalize: 0.25
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex9
     Name: Example9
     Coin: 88
     Normalize: 0.4
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex10
     Name: Example10
     Coin: 10
     Normalize: 0.9
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex11
     Name: Example11
     Coin: 20
     Normalize: 0.8
     IsAllow: 0
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex12
     Name: Example12
     Coin: 500
     Normalize: 1
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex13
     Name: Example13
     Coin: 60
     Normalize: 0.01
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex14
     Name: Example14
     Coin: 1
     Normalize: 1
     IsAllow: 0
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex15
     Name: Example15
     Coin: 44
     Normalize: 0.7
     IsAllow: 0
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex16
     Name: Example16
     Coin: 55
     Normalize: 0.3
     IsAllow: 0
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex17
     Name: Example17
     Coin: 887
     Normalize: 0.25
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
   - Id: ex18
     Name: Example18
     Coin: 88
     Normalize: 0.4
     IsAllow: 1
     Sprite: {fileID: 0}
+    ItemList: []
+    ItemList2: []
+    ItemList3: []
+    ItemList4: []
+  - Id: ex19
+    Name: Example10
+    Coin: 10
+    Normalize: 0.9
+    IsAllow: 1
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex2
+    ItemList2:
+    - ex1
+    - ex2
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex3
+  - Id: ex20
+    Name: Example11
+    Coin: 20
+    Normalize: 0.8
+    IsAllow: 0
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex3
+    ItemList2:
+    - ex1
+    - ex3
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex4
+  - Id: ex21
+    Name: Example12
+    Coin: 500
+    Normalize: 1
+    IsAllow: 1
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex4
+    ItemList2:
+    - ex1
+    - ex4
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex5
+  - Id: ex22
+    Name: Example13
+    Coin: 60
+    Normalize: 0.01
+    IsAllow: 1
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex5
+    ItemList2:
+    - ex1
+    - ex5
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex6
+  - Id: ex23
+    Name: Example14
+    Coin: 1
+    Normalize: 1
+    IsAllow: 0
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex6
+    ItemList2:
+    - ex1
+    - ex6
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex7
+  - Id: ex24
+    Name: Example15
+    Coin: 44
+    Normalize: 0.7
+    IsAllow: 0
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex7
+    ItemList2:
+    - ex1
+    - ex7
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex8
+  - Id: ex25
+    Name: Example16
+    Coin: 55
+    Normalize: 0.3
+    IsAllow: 0
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex8
+    ItemList2:
+    - ex1
+    - ex8
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex9
+  - Id: ex26
+    Name: Example17
+    Coin: 887
+    Normalize: 0.25
+    IsAllow: 1
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex9
+    ItemList2:
+    - ex1
+    - ex9
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex10
+  - Id: ex27
+    Name: Example18
+    Coin: 88
+    Normalize: 0.4
+    IsAllow: 1
+    Sprite: {fileID: 0}
+    ItemList:
+    - ex1
+    - ex10
+    ItemList2:
+    - ex1
+    - ex10
+    ItemList3:
+    - ex1
+    - ex3
+    ItemList4:
+    - ex1
+    - ex11
   sheetID: 1Ecqa5EU_-vAD7erb5KzyKy3ku7IGQPDWLZ4hH2Ye0Ao
   enties:
   - TabName: Basic Example
     GID: 0
-  - TabName: Download Asset
-    GID: 141121372
+  - TabName: Empty Line
+    GID: 1613543933
+  - TabName: RegexComma
+    GID: 27226035
