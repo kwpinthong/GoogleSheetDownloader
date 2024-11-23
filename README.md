@@ -1,3 +1,5 @@
+by Unity version 2022.3.49f1
+
 Purpose of this Plugin
 - Click One Button to Download all data in Google Sheet and save it to ScriptableObject in Unity project
 - works only in Editor, while the database used in Runtime
